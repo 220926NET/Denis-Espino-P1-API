@@ -25,6 +25,8 @@ jobs:
         cd ./Api;
         dotnet restore
     - name: Build
-      run: dotnet build --no-restore
+      run: 
+        cd ./Api;
+        dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
