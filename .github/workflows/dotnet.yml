@@ -31,7 +31,9 @@ jobs:
       # equivalent to doing dotnet restore in your commandline
       # dotnet restore will download all your dependencies and make sure your 
     - name: Restore dependencies
-      run: dotnet restore
+      run: 
+        cd Api
+        dotnet restore
     - name: Build
       run: dotnet build --no-restore
     - name: Test
