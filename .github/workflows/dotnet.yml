@@ -68,5 +68,7 @@ jobs:
       run: |
         .\.sonar\scanner\dotnet-sonarscanner begin /k:"220926NET_Denis-Espino-P1-API" /o:"220926net" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
         cd ./Api;
-        dotnet test --no-build --verbosity normal;
+        dotnet test;
         .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
+        
+        
